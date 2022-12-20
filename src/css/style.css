@@ -76,3 +76,27 @@ header .offcanvas{
   height: 16.7px;
   cursor: pointer;
 }
+
+
+
+/*search cart {component*/
+#divCartSearch{
+    width: 362px;
+    height: 95px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+}
+#divCartSearch img{
+  width: 126px;
+}
+
+/*carousel*/
+.carousel {
+    width: 588px;
+    height:349px
+    
+}
+.carousel img{
+    width: 588px;
+    border-radius: 20px
+}

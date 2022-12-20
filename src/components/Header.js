@@ -1,10 +1,39 @@
-import React from 'react';
+import React , { useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import 'bootstrap/dist/js/bootstrap.min.js'
+import axios from "axios";
+
 import logo from "../images/logo.svg";
-import search from "../images/search.svg"
+import search from "../images/search.svg";
+
+import Cartsearch from './Cartsearch';
 
 function Header() {
+
+
+    const[searchInput,setSearch]=useState("");
+    const[job,setjob]=useState([]) 
+
+    const saveSearchHandeler= event=>{
+        setSearch(event.target.value)
+    }
+
+
+    async function searchHandler() {
+        console.log("Search: " + searchInput) 
+    
+
+        await axios.get(`https://api-beta.melobit.com/v1/search/query/${searchInput}/0/5`)
+        .then (response => {
+            console.log(response.data.results)
+            setjob(response.data.results)
+            
+       
+      })}
+
+  
+
     return (
         <header >
             <div className='container-fluid mt-4'>
@@ -33,15 +62,26 @@ function Header() {
             </div>
 
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header" dir='rtl'>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div className="offcanvas-header" dir='rtl'>
+                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body overflow-hidden">
+                <div className="offcanvas-body overflow-hidden">
                     <div id='boxSearch' className='d-flex justify-content-between align-items-center'>
-                       <input type="text" className='px-3' placeholder='type here to search' />
-                       <img src={search} alt="search icon" className='mx-3'/>
+                       <input type="text" className='px-3' placeholder='type here to search' value={searchInput} 
+                      
+                      onChange={saveSearchHandeler} 
+                       />
+                       <img src={search} alt="search icon" className='mx-3' onClick={searchHandler}/>
                     </div>
+
+              
+       
+             
+             <div className='container-fluid'>
+                 
+               </div>
+
                 </div>
             </div>
         </header>

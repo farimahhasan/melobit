@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Bokor');
+@import url('https://fonts.googleapis.com/css?family=Kodchasan');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+*{
+    color: #ffff !important;
+}
+body{
+    background: #001534;
+
+}
+header h1{
+    font-family: Bokor;
+    font-size: 60px;
+}
+header a{
+    font-family: Kodchasan;
+    font-size: 20px;
+
+}
+header #searchDiv{
+    background-color:#FFFEFE66;
+    width: 152px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 0 20px;
+    font-family: Roboto;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#searchDiv img{
+    width: 15.7px;
+    height: 15.7px;
+
+}
+
+header button{
+    background-color:#FA2870 ;
+    border-radius:22.67px ;
+    border: none;
+    width: 88.4px;
+    height:36.13px ;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 14.95px;
+}
+
+header .offcanvas{
+    background-color: #0F2950E8;
+    border-radius: 20px 0 0 20px;
+    width: 486px !important;
+    
+}
+.offcanvas-body #boxSearch{
+    width: 464px;
+    height: 47px;
+    background-color: #001534;
+    border-radius: 20px 0 0 20px;
+}
+#boxSearch input{
+    font-family: Kodchasan;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    height: 34px;
+
+}
+#boxSearch input::placeholder{
+    color: #ffff;
+}
+#boxSearch img{
+  width: 16.7px;
+  height: 16.7px;
+  cursor: pointer;
+}

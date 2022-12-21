@@ -98,5 +98,10 @@ header .offcanvas{
 }
 .carousel img{
     width: 588px;
+    height: 349px;
     border-radius: 20px
+}
+.icon-music img{
+    width: 190.95px;
+    height: 81.53px;
 }

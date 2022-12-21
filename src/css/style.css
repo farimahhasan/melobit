@@ -101,6 +101,24 @@ header .offcanvas{
     height: 349px;
     border-radius: 20px
 }
+.carousel-caption{
+    top: 0;
+    left: -45%;
+} 
+.carousel-caption button{
+    background-color: #FF32788F;
+    width: 157.18px;
+    height:42.64px;
+    border-radius: 50px;
+    font-family: Kodchasan;
+    border: none;
+    font-size: 16px;
+}
+
+.carousel-caption img{
+    width: 33.39px;
+    height: 33.39px;
+}
 .icon-music img{
     width: 190.95px;
     height: 81.53px;

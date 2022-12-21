@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import axios from "axios";
 import bgslider1 from '../images/bgslider1.svg'
 import bgslider2 from '../images/bgslider2.svg'
+import play from '../images/play.svg'
 
 
 
@@ -31,22 +32,34 @@ const Carousel = () => {
 
             <div id="carouselExampleControls" className="carousel slide mx-auto" data-bs-ride="carousel">
   <div className="carousel-inner">
-    {/* {
+{/*     {
       slider.map((s)=>{
       <div className="carousel-item active">
         <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+      </div>
       </div>
       })
-    } */}
-    <div className="carousel-item active">
-     
+    }  */}
+<div className="carousel-item active">
+
       <img src={slider[0].album.image.cover.url} className="d-block w-100" alt="..." />
+      <div class="carousel-caption ">
+        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+      </div>
     </div>
     <div className="carousel-item">
       <img src={slider[1].album.image.cover.url}  className="d-block w-100" alt="..." />
+      <div class="carousel-caption">
+        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+      </div>
     </div>
     <div className="carousel-item">
       <img src={slider[2].album.image.cover.url} className="d-block w-100" alt="..." />
+      <div class="carousel-caption">
+        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+      </div>
     </div> 
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

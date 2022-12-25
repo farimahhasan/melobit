@@ -3,6 +3,8 @@ import axios from "axios";
 import bgslider1 from '../images/bgslider1.svg'
 import bgslider2 from '../images/bgslider2.svg'
 import play from '../images/play.svg'
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -14,6 +16,7 @@ const Carousel = () => {
         await axios.get(`https://api-beta.melobit.com/v1/song/slider/latest`)
         .then (response => {
             console.log(response.data.results)
+
             setSlider(response.data.results)
         })}
         fetchAPI();
@@ -32,21 +35,18 @@ const Carousel = () => {
 
             <div id="carouselExampleControls" className="carousel slide mx-auto" data-bs-ride="carousel">
   <div className="carousel-inner">
-{/*     {
-      slider.map((s)=>{
-      <div className="carousel-item active">
-        <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
-        <div className="carousel-caption d-none d-md-block">
-        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
-      </div>
-      </div>
-      })
-    }  */}
-<div className="carousel-item active">
 
+<div className="carousel-item active">
+        {
+          console.log(slider[0].id)
+        }
       <img src={slider[0].album.image.cover.url} className="d-block w-100" alt="..." />
       <div className="carousel-caption ">
-        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+        <h5><button>
+           <Link to={`details/${slider[0].id}`} className='text-decoration-none'>
+            Listen now <img src={play} alt="play" />
+          </Link> 
+         </button></h5>
       </div>
     </div>
     <div className="carousel-item">
@@ -85,3 +85,14 @@ const Carousel = () => {
 };
 
 export default Carousel;
+
+{/*     {
+      slider.map((s)=>{
+      <div className="carousel-item active">
+        <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
+        <div className="carousel-caption d-none d-md-block">
+        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+      </div>
+      </div>
+      })
+    }  */}

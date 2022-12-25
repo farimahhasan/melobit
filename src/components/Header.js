@@ -9,6 +9,9 @@ import search from "../images/search.svg";
 
 import Cartsearch from './Cartsearch';
 
+import {Link} from 'react-router-dom';
+
+
 function Header() {
 
 
@@ -45,8 +48,12 @@ function Header() {
                 <div className='col-6 text-center'>
                     <nav>
                         <ul className='m-0 p-0'>
-                            <li className='d-inline-block mx-2'><a  className='text-decoration-none' href="#">Home</a></li>
-                            <li className='d-inline-block mx-2'><a className='text-decoration-none' href="#">Playlist</a></li>
+                            <li className='d-inline-block mx-2'>
+                                <Link to="/" className='text-decoration-none'>Home</Link>
+                            </li>
+                            <li className='d-inline-block mx-2'>
+                                <a className='text-decoration-none' href="#">Playlist</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>

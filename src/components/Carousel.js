@@ -36,7 +36,7 @@ const Carousel = () => {
       slider.map((s)=>{
       <div className="carousel-item active">
         <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
-        <div class="carousel-caption d-none d-md-block">
+        <div className="carousel-caption d-none d-md-block">
         <h5><button>Listen now <img src={play} alt="play" /></button></h5>
       </div>
       </div>
@@ -45,22 +45,22 @@ const Carousel = () => {
 <div className="carousel-item active">
 
       <img src={slider[0].album.image.cover.url} className="d-block w-100" alt="..." />
-      <div class="carousel-caption ">
+      <div className="carousel-caption ">
         <h5><button>Listen now <img src={play} alt="play" /></button></h5>
       </div>
     </div>
     <div className="carousel-item">
       <img src={slider[1].album.image.cover.url}  className="d-block w-100" alt="..." />
-      <div class="carousel-caption">
+      <div className="carousel-caption">
         <h5><button>Listen now <img src={play} alt="play" /></button></h5>
       </div>
     </div>
     <div className="carousel-item">
       <img src={slider[2].album.image.cover.url} className="d-block w-100" alt="..." />
-      <div class="carousel-caption">
+      <div className="carousel-caption">
         <h5><button>Listen now <img src={play} alt="play" /></button></h5>
-      </div>
-    </div> 
+      </div> 
+    </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

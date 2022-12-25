@@ -37,9 +37,6 @@ const Carousel = () => {
   <div className="carousel-inner">
 
 <div className="carousel-item active">
-        {
-          console.log(slider[0].id)
-        }
       <img src={slider[0].album.image.cover.url} className="d-block w-100" alt="..." />
       <div className="carousel-caption ">
         <h5><button>
@@ -50,16 +47,24 @@ const Carousel = () => {
       </div>
     </div>
     <div className="carousel-item">
-      <img src={slider[1].album.image.cover.url}  className="d-block w-100" alt="..." />
-      <div className="carousel-caption">
-        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+    <img src={slider[1].album.image.cover.url} className="d-block w-100" alt="..." />
+      <div className="carousel-caption ">
+        <h5><button>
+           <Link to={`details/${slider[1].id}`} className='text-decoration-none'>
+            Listen now <img src={play} alt="play" />
+          </Link> 
+         </button></h5>
       </div>
     </div>
     <div className="carousel-item">
-      <img src={slider[2].album.image.cover.url} className="d-block w-100" alt="..." />
-      <div className="carousel-caption">
-        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
-      </div> 
+    <img src={slider[2].album.image.cover.url} className="d-block w-100" alt="..." />
+      <div className="carousel-caption ">
+        <h5><button>
+           <Link to={`details/${slider[2].id}`} className='text-decoration-none'>
+            Listen now <img src={play} alt="play" />
+          </Link> 
+         </button></h5>
+      </div>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

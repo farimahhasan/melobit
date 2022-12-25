@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import Carousel from "./components/Carousel";
+import Home from "./components/Home";
 import Details from "./components/Details";
 import "./css/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +15,7 @@ function App() {
 
       <Routes>
           <Route path="/details/:id" element={<Details />} />
-          <Route path="/" element={<Carousel/>} />
+          <Route path="/" element={<Home/>} />
       </Routes>
 
     </div>

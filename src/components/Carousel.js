@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import axios from "axios";
+import { getSlider } from '../services/api';
 import bgslider1 from '../images/bgslider1.svg'
 import bgslider2 from '../images/bgslider2.svg'
 import play from '../images/play.svg'
@@ -11,17 +11,18 @@ import {Link} from 'react-router-dom';
 const Carousel = () => {
      
     const [slider,setSlider]=useState([])
-    useEffect(()=>{
-        const fetchAPI= async () =>{
-        await axios.get(`https://api-beta.melobit.com/v1/song/slider/latest`)
-        .then (response => {
-            console.log(response.data.results)
-
-            setSlider(response.data.results)
-        })}
-        fetchAPI();
-  },[])
+        
+    
    
+  useEffect(()=>{
+    const fetchAPI= async () =>{
+       const data=await getSlider();
+       console.log(data)
+/*        console.log(getSlider()) */
+       setSlider(data)
+    }
+    fetchAPI();
+},[])
 
     return (
         <>
@@ -36,7 +37,7 @@ const Carousel = () => {
             <div id="carouselExampleControls" className="carousel slide mx-auto" data-bs-ride="carousel">
   <div className="carousel-inner">
 
-<div className="carousel-item active">
+{/* <div className="carousel-item active">
       <img src={slider[0].album.image.cover.url} className="d-block w-100" alt="..." />
       <div className="carousel-caption ">
         <h5><button>
@@ -65,7 +66,22 @@ const Carousel = () => {
           </Link> 
          </button></h5>
       </div>
-    </div>
+    </div> */}
+{
+slider.map((s,i)=>(
+      <div key={s.id} className={i===0?"carousel-item active":"carousel-item"}>
+ <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
+      <div className="carousel-caption ">
+        <h5><button>
+           <Link to={`details/${s.id}`} className='text-decoration-none'>
+            Listen now <img src={play} alt="play" />
+          </Link> 
+         </button></h5>
+      </div>
+      </div>
+
+))
+    }
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -93,11 +109,16 @@ export default Carousel;
 
 {/*     {
       slider.map((s)=>{
-      <div className="carousel-item active">
-        <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
-        <div className="carousel-caption d-none d-md-block">
-        <h5><button>Listen now <img src={play} alt="play" /></button></h5>
+      <div key={s.id} className="carousel-item active">
+ <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
+      <div className="carousel-caption ">
+        <h5><button>
+           <Link to={`details/${s.id}`} className='text-decoration-none'>
+            Listen now <img src={play} alt="play" />
+          </Link> 
+         </button></h5>
       </div>
       </div>
+
       })
     }  */}

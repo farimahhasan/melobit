@@ -18,6 +18,7 @@ function Details() {
 
     const [isPlaying,setIsPlaying]=useState(false)
 
+    const [openDownlod,setOpenDownlod]=useState(false)
     // const getDetails= async() =>{
     //     const response=await axios.get(`https://api-beta.melobit.com/v1/song/{${params.id}}`);
     //     return response.data;
@@ -105,8 +106,22 @@ function Details() {
                     </p>
                 </div>
                  <div className='col-4 text-center'>
-                <button className='me-3' >Download &nbsp; <img src={download} alt="download icon" /></button>
-                <button>Share &nbsp; <img src={share} alt="share icon" /></button>
+                <div className='row'>
+                   <div className='col-6'>
+                    <button onClick={()=>setOpenDownlod(true)}  >Download &nbsp; <img src={download} alt="download icon" /></button>
+                    {
+                        openDownlod && song.audio &&
+                        <div className='downlod-high-medium mt-3'>
+                        <button><a  className='text-decoration-none' href={song.audio.medium.url} download>with 128 quality</a></button>
+                        <button className='mt-3'><a className='text-decoration-none' href={song.audio.high.url} download>with 320 quality</a></button>
+                        </div>
+                    }
+                   </div>
+                   <div className='col-6'>
+                   <button>Share &nbsp; <img src={share} alt="share icon" /></button>
+                   </div>
+                </div>
+
 
                 </div>
 {/*                 <div className='col-2'>
@@ -134,9 +149,9 @@ function Details() {
                             <div className='progressbar-div mt-3' onClick={checkWidth} ref={clickRef}>
                                 <div className='progress-div' style={{width:`${song.progress}%`}}>
                                 </div>
-                                <div className='row pt-3 justify-content-between'>
-                                    <div className='col-5  text-dark fs-6 fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
-                                    <div className='col-5  text-dark fs-6 fw-bold text-end'>{audioElm.current.duration.toFixed(0)}s</div>
+                                <div className='row pt-3 justify-content-between duration-ct'>
+                                    {/* <div className='col-5  text-dark fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
+                                    <div className='col-5  text-dark fw-bold text-end'>{audioElm.current.duration.toFixed(0)}s</div> */}
                                 </div>
                             </div>
                            

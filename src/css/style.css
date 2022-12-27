@@ -141,6 +141,9 @@ header .offcanvas{
     font-size:12px;
     font-family: Kodchasan;
 }
+#details .downlod-high-medium button{
+    background-color:rgb(250, 40, 112, 0.35) ;
+}
 
 #details .top-cart{
     height: 396px;
@@ -194,4 +197,8 @@ header .offcanvas{
     height: 100%;
     position: absolute;
     background-color: rgb(255, 255, 255);
+}
+
+#details .duration-ct{
+    font-size: 10px;
 }

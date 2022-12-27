@@ -106,8 +106,8 @@ function Details() {
                     </p>
                 </div>
                  <div className='col-4 text-center'>
-                <div className='row'>
-                   <div className='col-6'>
+                <div className='row justify-content-center'>
+                   <div className='col-4'>
                     <button onClick={()=>setOpenDownlod(true)}  >Download &nbsp; <img src={download} alt="download icon" /></button>
                     {
                         openDownlod && song.audio &&
@@ -117,7 +117,7 @@ function Details() {
                         </div>
                     }
                    </div>
-                   <div className='col-6'>
+                   <div className='col-4'>
                    <button>Share &nbsp; <img src={share} alt="share icon" /></button>
                    </div>
                 </div>

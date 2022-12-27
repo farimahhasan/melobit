@@ -10,6 +10,10 @@ body{
     background: #001534;
 
 }
+h2{
+    font-family: Kodchasan;
+      font-size: 35px;
+}
 header h1{
     font-family: Bokor;
     font-size: 60px;
@@ -166,10 +170,6 @@ header .offcanvas{
     height: 200px;
 
     border-radius: 20px;
-    /* background-color: rgba(217, 217, 217, 0.9); */
-/*     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter:blur(10px) */
-
     background: rgba(255, 255, 255, .3);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -201,4 +201,17 @@ header .offcanvas{
 
 #details .duration-ct{
     font-size: 10px;
+}
+
+
+
+/*new Songs*/
+
+
+#newSongs{
+    background-color: #161D35;
+}
+
+#newSongs img{
+    border-radius: 20px;
 }

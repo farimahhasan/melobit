@@ -83,7 +83,7 @@ header .offcanvas{
 
 
 
-/*search cart {component*/
+/*search cart component*/
 #divCartSearch{
     width: 362px;
     height: 95px;
@@ -205,17 +205,37 @@ header .offcanvas{
 
 
 
-/*new Songs*/
-
-
-#newSongs{
-    background-color: #161D35;
-}
-
-#newSongs img{
-    border-radius: 20px;
-}
+/* top */
 
 #topComponent{
     background-color: #161D35;
+}
+#topComponent img{
+    border-radius: 20px;
+}
+
+/*trending Artists*/
+.trendingA{
+    background-color: #161D35;
+
+}
+.trendingA img{
+    border-radius: 100%;
+}
+
+.link-play {
+    bottom: -40px;
+    right: 40px;
+    transition: 0.5s;
+
+}
+.link-play img{
+    width: 33.39px;
+    height: 33.39px;
+}
+.container-play-icon{
+    cursor: pointer;
+}
+.container-play-icon:hover .link-play{
+    bottom: 20px;
 }

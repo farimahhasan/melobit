@@ -8,7 +8,7 @@ import share from "../images/share.svg"
 // import { getDetails } from '../services/api';
 import axios from "axios";
 
-function Details() {
+const Details = () => {
    const params = useParams();
 
     const [song,setSong]=useState([])
@@ -94,7 +94,7 @@ function Details() {
               <div className='row justify-content-center'>
                 <div className='col-11'>
                     {
-                        song.image && <img className='w-100' src={song.image.slider.url}  alt='..'/>
+                        song.image && <img className='w-100' src={song.album.image.cover.url}  alt='..'/>
 
                     }
                 </div>
@@ -150,11 +150,11 @@ function Details() {
                                 <div className='progress-div' style={{width:`${song.progress}%`}}>
                                 </div>
                                 <div className='row pt-3 justify-content-between duration-ct'>
-                                    {/* <div className='col-5  text-dark fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
-                                    <div className='col-5  text-dark fw-bold text-end'>{audioElm.current.duration.toFixed(0)}s</div> */}
+                                    <div className='col-5  text-dark fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
+                                    <div className='col-5  text-dark fw-bold text-end'>{audioElm.current.duration.toFixed(0)}s</div>
                                 </div>
                             </div>
-                           
+                            
                              <div className='play text-center mt-5'>
                               <button className='btn-play-pause' onClick={clickHandler}>
                                 {

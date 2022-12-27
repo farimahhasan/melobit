@@ -12,7 +12,7 @@ import Cartsearch from './Cartsearch';
 import {Link} from 'react-router-dom';
 
 
-function Header() {
+const Header= () => {
 
 
     const[searchInput,setSearch]=useState("");

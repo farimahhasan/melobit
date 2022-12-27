@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cartsearch({name}) {
+const Cartsearch=({name})=>{
     return (
             <div className='row justify-content-center'>
                <div className='col-10'>

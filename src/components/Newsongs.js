@@ -3,7 +3,7 @@ import { getLatestSong } from '../services/api';
 import Top from './Top';
 
 
-function Newsongs() {
+const Newsongs = () => {
 
     const [newSongs,setNewSongs]=useState([])
         

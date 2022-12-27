@@ -215,3 +215,7 @@ header .offcanvas{
 #newSongs img{
     border-radius: 20px;
 }
+
+#topComponent{
+    background-color: #161D35;
+}

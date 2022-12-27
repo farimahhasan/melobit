@@ -10,6 +10,17 @@ const getLatestSong= async() =>{
     return response.data.results;
 }
 
+const getTopDaySong= async() =>{
+    const response=await axios.get('https://api-beta.melobit.com/v1/song/top/day/0/5');
+    return response.data.results;
+}
+
+const getTopWeekSong= async() =>{
+    const response=await axios.get('https://api-beta.melobit.com/v1/song/top/week/0/6');
+    return response.data.results;
+}
 
 
-export {getSlider , getLatestSong}
+
+
+export {getSlider , getLatestSong , getTopDaySong , getTopWeekSong}

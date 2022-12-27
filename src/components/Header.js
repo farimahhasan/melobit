@@ -16,7 +16,7 @@ const Header= () => {
 
 
     const[searchInput,setSearch]=useState("");
-    const[job,setjob]=useState([]) 
+    const[searchResult,setsearchResult]=useState([]) 
 
     const saveSearchHandeler= event=>{
         setSearch(event.target.value)
@@ -30,7 +30,7 @@ const Header= () => {
         await axios.get(`https://api-beta.melobit.com/v1/search/query/${searchInput}/0/5`)
         .then (response => {
             console.log(response.data.results)
-            setjob(response.data.results)
+            setsearchResult(response.data.results)
       })}
 
   
@@ -83,9 +83,8 @@ const Header= () => {
               
        
              
-             <div className='container-fluid'>
-                 
-               </div>
+                   <Cartsearch state={searchResult}/>
+              
 
                 </div>
             </div>

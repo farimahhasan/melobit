@@ -150,8 +150,14 @@ const Details = () => {
                                 <div className='progress-div' style={{width:`${song.progress}%`}}>
                                 </div>
                                 <div className='row pt-3 justify-content-between duration-ct'>
+                                    {
+                                    audioElm.current &&
+                                    <>
                                     <div className='col-5  text-dark fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
                                     <div className='col-5  text-dark fw-bold text-end'>{audioElm.current.duration.toFixed(0)}s</div>
+                                    </>
+                                    }
+
                                 </div>
                             </div>
                             

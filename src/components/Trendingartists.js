@@ -27,7 +27,7 @@ const Trendingartists = () => {
             </div>
             {
                 trendingArtists.map((a)=>(
-                    <div className='col-3'>
+                    <div className='col-3' key={a.id}>
                     <img src={a.image.cover.url} className='w-100'/>
                     <h6 className='px-3 pt-2'>sum Songs Downloads Count : {a.sumSongsDownloadsCount}</h6>
                     <h6 className='text-white-50 px-3'>{a.fullName}</h6>

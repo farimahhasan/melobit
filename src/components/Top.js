@@ -13,7 +13,7 @@ const Top = ({title,state}) => {
             </div>
             {
                 state.map((song)=>(
-                    <div className='col'>
+                    <div className='col'key={song.id}>
                     <div className='container-play-icon position-relative w-100 overflow-hidden'>
                     <img src={song.album.image.cover.url} className='w-100'/>
                     <Link to={`details/${song.id}`} className='text-decoration-none position-absolute link-play'>

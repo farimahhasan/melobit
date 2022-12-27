@@ -90,8 +90,14 @@ header .offcanvas{
     border-radius: 20px;
     background-color: #D9D9D9;
 }
-#divCartSearch img{
-  width: 126px;
+#divCartSearch > img{
+  width: 150px;
+  height: 70px;
+border-radius: 10px;
+}
+#divCartSearch a img{
+    width:30px;
+    height: 30px;
 }
 
 /*carousel*/

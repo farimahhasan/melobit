@@ -160,7 +160,8 @@ header .offcanvas{
     position: relative;
     top: -410px;
     z-index: 5;
-    height: 235.65px;
+    height: 200px;
+
     border-radius: 20px;
     /* background-color: rgba(217, 217, 217, 0.9); */
 /*     backdrop-filter: blur(10px);
@@ -174,4 +175,23 @@ header .offcanvas{
 #details .play img{
     width: 33.39px;
     height: 33.39px;
+}
+#details .play button{
+    border: none;
+    background: none;
+}
+
+#details .progressbar-div{
+    width: 90%;
+    margin: 0 auto;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.21);
+    position: relative;
+    cursor: pointer;
+    
+}
+#details .progress-div{
+    height: 100%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
 }

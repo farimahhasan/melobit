@@ -31,8 +31,6 @@ function Header() {
         .then (response => {
             console.log(response.data.results)
             setjob(response.data.results)
-            
-       
       })}
 
   

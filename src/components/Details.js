@@ -21,6 +21,8 @@ const Details = () => {
     const [isPlaying,setIsPlaying]=useState(false)
 
     const [openDownlod,setOpenDownlod]=useState(false)
+
+    const [showProgress,setShowProgress]=useState(false)
     // const getDetails= async() =>{
     //     const response=await axios.get(`https://api-beta.melobit.com/v1/song/{${params.id}}`);
     //     return response.data;
@@ -154,7 +156,9 @@ const Details = () => {
                     <div className='bottom-cart text-center py-2'>
                     {song.artists && <h6 className='pt-3'>{song.artists[0].fullName}</h6> }
                             <h6 className='text-white-50'>{song.title}</h6>
-                
+
+                {
+                    showProgress&&
                             <div className='progressbar-div mt-3' onClick={checkWidth} ref={clickRef}>
                                 <div className='progress-div' style={{width:`${song.progress}%`}}>
                                 </div>
@@ -169,12 +173,13 @@ const Details = () => {
 
                                 </div>
                             </div>
+                           }
                             
                              <div className='play text-center mt-5'>
                               <button className='btn-play-pause' onClick={clickHandler}>
                                 {
                                 
-                                    isPlaying ? <img src={pauseAudio} alt="pause" /> :<img src={playAudio} alt="play" /> 
+                                    isPlaying ? <img src={pauseAudio} alt="pause" /> :<img src={playAudio} alt="play" onClick={()=>setShowProgress(true)} /> 
                                 }
                               
                               </button>

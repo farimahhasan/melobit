@@ -2,13 +2,13 @@ import React from 'react';
 import play from '../images/play.svg'
 import {Link} from 'react-router-dom';
 
-const Cartsearch=({state})=>{
+const Cartsearch=({stateResult})=>{
     return (
 
       
       <div className='container-fluid'>
       {
-        state.map((s)=>(
+       stateResult.map((s)=>(
           
             s.type==="song" && 
           
@@ -23,7 +23,7 @@ const Cartsearch=({state})=>{
                      </h6>
                     <p>{s.song.album.artists[0].fullName}</p>
                    </div>
-                   <Link to={`details/${s.song.id}`} className='text-decoration-none'>
+                   <Link to={`details/${s.song.id}`} aria-label="Close" className='text-decoration-none'>
                      <img src={play} alt="play icon" />
                     </Link> 
                 </div>

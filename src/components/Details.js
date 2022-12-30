@@ -7,6 +7,8 @@ import download from "../images/download.svg"
 import share from "../images/share.svg"
 // import { getDetails } from '../services/api';
 import axios from "axios";
+import { Link } from 'react-router-dom';
+import arrowLeft from '../images/arrowLeft.svg'
 
 const Details = () => {
    const params = useParams();
@@ -57,16 +59,19 @@ const Details = () => {
                 setSong(response.data)})
            }
            fetchAPI();
-            if(isPlaying){
-                audioElm.current.play()
-            }
-        //                else{
-        //     audioElm.current.pause()
-        //    }
-
-
+           window.scrollTo(0,0);
        },[])
        
+       useEffect(()=>{
+
+        if( isPlaying && audioElm.current){
+            audioElm.current.play()
+        }else if(audioElm.current)
+        {
+            audioElm.current.pause() ;
+        }
+        
+       })
 
        const clickHandler=()=>{
         setIsPlaying(!isPlaying)
@@ -90,9 +95,13 @@ const Details = () => {
 
     return (
         <div id='details' className='container-fluid mt-5'>
-
+              
               <div className='row justify-content-center'>
-                <div className='col-11'>
+                <div className='col-12 text-center'>
+                    <img src={arrowLeft} alt="arrow left icon"/>
+                    <Link to="/" className='text-decoration-none a-details'> Home</Link>
+                </div>
+                <div className='col-11 mt-5'>
                     {
                         song.image && <img className='w-100' src={song.album.image.cover.url}  alt='..'/>
 
@@ -153,8 +162,8 @@ const Details = () => {
                                     {
                                     audioElm.current &&
                                     <>
-                                    <div className='col-5  text-dark fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
-                                    <div className='col-5  text-dark fw-bold text-end'>{audioElm.current.duration.toFixed(0)}s</div>
+                                    <div className='col-5  text-dark fw-bold text-start'>{Number(audioElm.current.currentTime.toFixed(0))}s</div>
+                                    <div className='col-5  text-dark fw-bold text-end'>{Number(audioElm.current.duration.toFixed(0))}s</div>
                                     </>
                                     }
 

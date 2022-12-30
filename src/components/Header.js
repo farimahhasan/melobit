@@ -20,18 +20,22 @@ const Header= () => {
 
     const saveSearchHandeler= event=>{
         setSearch(event.target.value)
+    
     }
 
+   const clearInput=()=>{
+    setSearch("")
+   }
 
-    async function searchHandler() {
+   const searchHandler=async ()=>{
         console.log("Search: " + searchInput) 
-    
 
         await axios.get(`https://api-beta.melobit.com/v1/search/query/${searchInput}/0/5`)
         .then (response => {
             console.log(response.data.results)
             setsearchResult(response.data.results)
-      })}
+     })}
+
 
   
 
@@ -57,7 +61,7 @@ const Header= () => {
                 </div>
                 <div className='col-2 text-end ' dir='rtl'>
                     <div id='searchDiv' className='d-flex align-items-center justify-content-between' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src={search} alt="search icon" /> <span dir='ltr'>search ...</span> </div>
-                </div>
+                  </div>
                 <div className='col-1'>
                     <button>login</button>
                 </div>
@@ -69,7 +73,7 @@ const Header= () => {
 
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header" dir='rtl'>
-                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" onClick={clearInput}></button>
                 </div>
                 <div className="offcanvas-body overflow-hidden">
                     <div id='boxSearch' className='d-flex justify-content-between align-items-center'>
@@ -77,14 +81,14 @@ const Header= () => {
                       
                       onChange={saveSearchHandeler} 
                        />
-                       <img src={search} alt="search icon" className='mx-3' onClick={searchHandler}/>
+                       <img src={search} alt="search icon" className='mx-3' onClick={searchHandler} />
                     </div>
 
               
        
              
-                   <Cartsearch state={searchResult}/>
-              
+                   <Cartsearch stateResult={searchResult} />
+
 
                 </div>
             </div>

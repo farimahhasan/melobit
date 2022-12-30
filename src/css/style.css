@@ -208,7 +208,10 @@ border-radius: 10px;
 #details .duration-ct{
     font-size: 10px;
 }
-
+#details .a-details{
+    font-family: Kodchasan;
+    font-size: 20px;
+}
 
 
 /* top */

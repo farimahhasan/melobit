@@ -4,7 +4,7 @@ import playAudio from '../images/play.svg'
 import pauseAudio from '../images/pause.svg'
 
 import download from "../images/download.svg"
-import share from "../images/share.svg"
+// import share from "../images/share.svg"
 // import { getDetails } from '../services/api';
 import axios from "axios";
 import { Link } from 'react-router-dom';
@@ -129,7 +129,7 @@ const Details = () => {
                     }
                    </div>
                    <div className='col-4'>
-                   <button>Share &nbsp; <img src={share} alt="share icon" /></button>
+                   {/* <button>Share &nbsp; <img src={share} alt="share icon" /></button> */}
                    </div>
                 </div>
 

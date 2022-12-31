@@ -71,7 +71,7 @@ const Carousel = () => {
 slider.map((s,i)=>(
       <div key={s.id} className={i===0?"carousel-item active":"carousel-item"}>
  <img src={s.album.image.cover.url} className="d-block w-100" alt="..." />
-      <div className="carousel-caption ">
+      <div className="carousel-caption">
         <h5><button>
            <Link to={`details/${s.id}`} className='text-decoration-none'>
             Listen now <img src={play} alt="play" />

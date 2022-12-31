@@ -5,10 +5,11 @@
 
 *{
     color: #ffff !important;
+
+
 }
 body{
-    background: #001534;
-
+    background-color: #001534 !important;
 }
 h2{
     font-family: Kodchasan;
@@ -51,17 +52,16 @@ header button{
     font-size: 14.95px;
 }
 
-header .offcanvas{
+/* header .offcanvas{
     background-color: #0F2950E8;
     border-radius: 20px 0 0 20px;
     width: 486px !important;
     
-}
-.offcanvas-body #boxSearch{
-    width: 464px;
+} */
+ #boxSearch{
     height: 47px;
-    background-color: #001534;
-    border-radius: 20px 0 0 20px;
+    background-color: #0F2950E8;
+    border-radius: 20px;
 }
 #boxSearch input{
     font-family: Kodchasan;
@@ -85,7 +85,7 @@ header .offcanvas{
 
 /*search cart component*/
 #divCartSearch{
-    width: 362px;
+   
     height: 95px;
     border-radius: 20px;
     background-color: #D9D9D9;

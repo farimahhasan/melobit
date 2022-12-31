@@ -7,8 +7,8 @@ import download from "../images/download.svg"
 // import share from "../images/share.svg"
 // import { getDetails } from '../services/api';
 import axios from "axios";
-import { Link } from 'react-router-dom';
-import arrowLeft from '../images/arrowLeft.svg'
+// import { Link } from 'react-router-dom';
+// import arrowLeft from '../images/arrowLeft.svg'
 
 const Details = () => {
    const params = useParams();
@@ -96,13 +96,13 @@ const Details = () => {
 
 
     return (
-        <div id='details' className='container-fluid mt-5'>
+        <div id='details' className='container-fluid mt-2'>
               
               <div className='row justify-content-center'>
-                <div className='col-12 text-center'>
+                {/* <div className='col-12 text-center'>
                     <img src={arrowLeft} alt="arrow left icon"/>
                     <Link to="/" className='text-decoration-none a-details'> Home</Link>
-                </div>
+                </div> */}
                 <div className='col-11 mt-5'>
                     {
                         song.image && <img className='w-100' src={song.album.image.cover.url}  alt='..'/>

@@ -53,7 +53,7 @@ const Header= () => {
                                 <Link to="/" className='text-decoration-none'>Home</Link>
                             </li>
                             <li className='d-inline-block mx-2'>
-                                <a className='text-decoration-none' href="#">Playlist</a>
+                                <a className='text-decoration-none' href="/">Playlist</a>
                             </li>
                         </ul>
                     </nav>

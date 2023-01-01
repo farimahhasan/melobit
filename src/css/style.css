@@ -113,7 +113,7 @@ border-radius: 10px;
 }
 .carousel-caption{
     top: 0;
-    left: -45%;
+    left: -45% !important;
 } 
 .carousel-caption button{
     background-color: #FF32788F;

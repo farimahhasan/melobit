@@ -5,7 +5,7 @@ import "./css/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Header from "./components/Header";
-import {Navigate, Route, Routes} from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import Cartsearch from "./components/Cartsearch";
 
 

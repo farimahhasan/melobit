@@ -6,10 +6,10 @@
 *{
     color: #ffff !important;
 
-
 }
 body{
     background-color: #001534 !important;
+    padding-bottom: 30px;
 }
 h2{
     font-family: Kodchasan;
@@ -107,7 +107,7 @@ border-radius: 10px;
 }
 .carousel-caption{
     top: 0;
-    left: -45% !important;
+    left: -40% !important;
 } 
 .carousel-caption button{
     background-color: #FF32788F;
@@ -185,6 +185,10 @@ border-radius: 10px;
 #details .col-download{
     margin-top: -50px;
 }
+
+.carousel-caption{
+    left: -30% !important;
+} 
 }
 
 #details .play img{

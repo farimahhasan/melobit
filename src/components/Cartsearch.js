@@ -14,10 +14,6 @@ const Cartsearch=()=>{
   
   }
 
-//  const clearInput=()=>{
-//   setSearch("")
-//  }
-
  const searchHandler=async ()=>{
       console.log("Search: " + searchInput) 
 
@@ -30,8 +26,8 @@ const Cartsearch=()=>{
 
       
       <div className='container-fluid'>
-        <div className='row justify-content-center'>
-          <div className='col-6'>
+        <div className='row justify-content-center mt-5'>
+          <div className='col-md-6 col-sm-11 col-11'>
           <div id='boxSearch' className='w-100 d-flex justify-content-between align-items-center'>
                        <input type="text" className='px-3' placeholder='type here to search' value={searchInput} 
                       
@@ -48,7 +44,7 @@ const Cartsearch=()=>{
           
             s.type==="song" && 
           
-               <div className='col-5 text-center mt-4' key={s.position}>
+               <div className='col-md-5 col-sm-11 col-11 text-center mt-4' key={s.position}>
                 <div id='divCartSearch' className='w-100 d-flex align-items-center justify-content-evenly'>
                     <img src={s.song.album.image.cover.url} alt={s.song.album.name.replace('Single' , '')}/>
                    <div>

@@ -52,12 +52,6 @@ header button{
     font-size: 14.95px;
 }
 
-/* header .offcanvas{
-    background-color: #0F2950E8;
-    border-radius: 20px 0 0 20px;
-    width: 486px !important;
-    
-} */
  #boxSearch{
     height: 47px;
     background-color: #0F2950E8;
@@ -136,8 +130,8 @@ border-radius: 10px;
 
 
 
-/*detai*/
-#details .col-11 img{
+/*details*/
+#details .bg-blur img{
     height:416px ;
     filter: blur(2px);
    border-radius: 20px;
@@ -159,7 +153,6 @@ border-radius: 10px;
     height: 396px;
     background-color:#D9D9D940;
     border-radius: 15px;
-    position: relative;
     top: -310px;
     padding-top: 20px;
 }
@@ -170,15 +163,28 @@ border-radius: 10px;
 }
 
 #details .bottom-cart{
-    position: relative;
     top: -410px;
     z-index: 5;
     height: 200px;
-
     border-radius: 20px;
     background: rgba(255, 255, 255, .3);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+}
+@media only screen and (max-width:900px){
+    #details .top-cart{
+        top:0;
+    }
+    
+#details .bottom-cart{
+    top: -100px;
+}
+#details .top-cart img{
+    width: 100%;
+}
+#details .col-download{
+    margin-top: -50px;
+}
 }
 
 #details .play img{

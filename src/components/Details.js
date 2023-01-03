@@ -122,7 +122,7 @@ const Details = () => {
                                     audioElm.current &&
                                     <>
                                     <div className='col-5  text-dark fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
-                                    <div className='col-5  text-dark fw-bold text-end'>{audioElm.current.duration.toFixed(0)}s</div>
+                                    <div className='col-5  text-dark fw-bold text-end'>{!isNaN(audioElm.current.duration.toFixed(0))}s</div>
                                     </>
                                     }
 

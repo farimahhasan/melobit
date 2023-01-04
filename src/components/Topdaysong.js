@@ -8,7 +8,6 @@ const Topdaysong = () => {
     useEffect(()=>{
       const fetchAPI= async () =>{
          const data=await getTopDaySong();
-         console.log(data)
          setTopDaySong(data)
       }
       fetchAPI();

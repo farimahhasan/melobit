@@ -17,7 +17,6 @@ const Carousel = () => {
   useEffect(()=>{
     const fetchAPI= async () =>{
        const data=await getSlider();
-       console.log(data)
        setSlider(data)
     }
     fetchAPI();

@@ -12,7 +12,6 @@ const Newsongs = () => {
     useEffect(()=>{
       const fetchAPI= async () =>{
          const data=await getLatestSong();
-         console.log(data)
          setNewSongs(data)
       }
       fetchAPI();

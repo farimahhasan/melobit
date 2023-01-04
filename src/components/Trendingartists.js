@@ -11,7 +11,6 @@ const Trendingartists = () => {
     useEffect(()=>{
       const fetchAPI= async () =>{
          const data=await getTrendingArtists();
-         console.log(data)
          setTrendingArtists(data)
       }
       fetchAPI();

@@ -29,7 +29,7 @@ const Cartsearch=()=>{
         <div className='row justify-content-center mt-5'>
           <div className='col-md-6 col-sm-11 col-11'>
           <div id='boxSearch' className='w-100 d-flex justify-content-between align-items-center'>
-                       <input type="text" className='px-3' placeholder='Search Artist' value={searchInput} 
+                       <input type="text" className='px-3' placeholder='Search ... ' value={searchInput} 
                       
                       onChange={saveSearchHandeler} 
 

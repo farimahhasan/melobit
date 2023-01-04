@@ -78,7 +78,7 @@ const Details = () => {
                 </div>
             </div> 
             <div className='row justify-content-center mt-5 '>
-                <div className='col-md-3 col-sm-11 col-11 order-md-1 order-sm-3 order-3 mt-md-0 mt-sm-5 mt-5'>
+                <div className='col-md-3 col-sm-11 col-11 order-md-1 order-sm-3 order-3 mt-md-0 mt-sm-5 mt-5 text-md-end text-sm-center text-center'>
                    
                         {song.lyrics && song.lyrics.split("\n").map((text , i)=><p key={i}  dir='rtl' className="p-0 m-0">{text}</p>)}
                     
@@ -121,7 +121,7 @@ const Details = () => {
                                     audioElm.current &&
                                     <>
                                     <div className='col-5  text-dark fw-bold text-start'>{audioElm.current.currentTime.toFixed(0)}s</div>
-                                    <div className='col-5  text-dark fw-bold text-end'>{!isNaN(audioElm.current.duration.toFixed(0)) && audioElm.current.duration.toFixed(0)}s</div>
+                                    <div className='col-5  text-dark fw-bold text-end'>{!isNaN(audioElm.current.duration.toFixed(0)) && `${audioElm.current.duration.toFixed(0)}s`}</div>
                                     </>
                                     }
 

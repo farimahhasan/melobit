@@ -11,7 +11,6 @@ import {Link} from 'react-router-dom';
 const Carousel = () => {
      
     const [slider,setSlider]=useState([])
-        
     
    
   useEffect(()=>{

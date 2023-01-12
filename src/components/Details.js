@@ -72,7 +72,7 @@ const Details = () => {
 
                 <div className='col-11 bg-blur mt-5 d-md-block d-sm-none d-none'>
                     {
-                        song.image && <img className='w-100' src={song.image.slider.url}  alt='slider'/>
+                        song.image && <img className='w-100' src={song.album.image.cover.url}  alt='slider'/>
 
                     }
                 </div>
